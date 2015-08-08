@@ -9,7 +9,7 @@ app.service('githubService', function($http, $q){
         var dfd = $q.defer();
         $http({
             method: "GET",
-            url: 'https://api.github.com/users/' + username
+            url: 'https://api.github.com/users/' + username + param
         }).then(function(res){
             console.log(res);
             dfd.resolve(res);
