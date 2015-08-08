@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html data-ng-app="github-api">
+<head>
+
+
+</head>
+<body data-ng-controller="GitHubController">
+    <form>
+        <div>
+            <textarea placeholder="search" data-ng-model="searchText"></textarea>
+        </div>
+        <div>
+            <button data-ng-click="getUserData()">Submit</button>
+        </div>
+    </form>
+
+
+    <img ng-src="{{user.avatar_url}}"/>
+    </br>
+        Id: {{user.id}}
+    </br>
+        Login: {{user.login}}
+    </br>
+        Repos: {{user.public_repos}}
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="controller.js"></script>
+    <script src="service.js"></script>
+</body>
+</html>
